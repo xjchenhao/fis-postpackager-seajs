@@ -1,6 +1,6 @@
 {
-  "name": "fis-postpackager-seajs",
-  "version": "0.0.1",
+  "name": "fis-postpackager-seajsconfig",
+  "version": "0.0.2",
   "description": "a postpackager plugin for fis to create sea-config.js",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/fouber/fis-postpackager-seajs.git"
+    "url": "https://github.com/xjchenhao/fis-postpackager-seajs.git"
   },
   "keywords": [
     "fis",
@@ -16,9 +16,9 @@
     "seajs",
     "spm"
   ],
-  "author": "fouber",
+  "author": "xjchenhao",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/fouber/fis-postpackager-seajs/issues"
+    "url": "https://github.com/xjchenhao/fis-postpackager-seajs/issues"
   }
 }
