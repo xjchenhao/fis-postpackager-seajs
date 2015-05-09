@@ -11,7 +11,10 @@ module.exports = function(ret, settings, conf, opt){ //打包后处理
     fis_sea_conf.alias = fis_sea_conf.alias || {};
     //构建别名表
     fis.util.map(ret.map.res, function(id, res){
-        fis_sea_conf.alias[id] = res.uri;
+        var _id=id.replace('.js','');
+        var _id=_id.replace('script/','');
+        var _uri=res.uri.replace('/script/','');
+        fis_sea_conf.alias[_id] = _uri;
     });
     //构造seajs的config.js配置文件
     var seajs_config = fis.file(fis.project.getProjectPath(), 'sea-config.js');
@@ -27,7 +30,7 @@ module.exports = function(ret, settings, conf, opt){ //打包后处理
             var content = file.getContent();
             if(/\bseajs\.use\s*\(/.test(content)){ //如果有sea.use(，才会插入
                 //插入到页面</head>标签结束之前
-                content = content.replace(/<\/head>/, script + '\n$&');
+                content = content.replace(/<script.*id="seajsnode".*><\/script>/, '$&\n  ' + script );
                 file.setContent(content);
             }
         }
