@@ -14,7 +14,7 @@ module.exports = function(ret, settings, conf, opt){ //打包后处理
         var _id=id.replace('.js','');
         var _id=_id.replace('script/','');
         var _uri=res.uri.replace('/script/','');
-        fis_sea_conf.alias[_id] = _uri;
+        fis_sea_conf.alias[_id] = res.uri;
     });
     //构造seajs的config.js配置文件
     var seajs_config = fis.file(fis.project.getProjectPath(), 'sea-config.js');
