@@ -1,7 +1,6 @@
 该项目是[fis-postpackager-seajs](https://www.npmjs.com/package/fis-postpackager-seajs)的分支，因为项目需要做了一些增强.
 
 ##安装
----
 
 `npm install fis-postpackager-seajsconfig `
 
@@ -10,7 +9,6 @@ or
 `npm install fis-postpackager-seajsconfig -g`
 
 ##调用方式
----
 
 `
 fis.match('::package', {
